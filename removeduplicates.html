@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Remove Duplicates</title>
+	<script type="text/javascript">
+		function removeDuplicates(arr){
+			var simple = [], count = 0, exist={};
+			while(count<arr.length){
+				var elm = arr[count];
+				if (!exist[elm]) {
+					simple.push(elm);
+					exist[elm] = true;
+					count++;
+				}else{
+					count++;
+				}
+			}
+			return simple;
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Merge two sorted array</title>
+	<script type="text/javascript">
+		function mergeSortedArr(a,b){
+			var pointer1=0,pointer2=0;
+			var mergeArr = [];
+			while(pointer1<a.length || pointer2<b.length){
+				if (pointer1==a.length) {
+					for(;pointer2<b.length;pointer2++){
+						mergeArr.push(b[pointer2]);						
+					}
+					break;
+				}else if (pointer2==b.length) {
+					for(;pointer1<a.length;pointer1++){
+						mergeArr.push(a[pointer1]);
+					}
+					break;
+				}else{
+					if (a[pointer1]<b[pointer2]) {
+						mergeArr.push(a[pointer1]);
+						pointer1++;
+
+					}else if (a[pointer1]>b[pointer2]) {
+						mergeArr.push(b[pointer2]);
+						pointer2++;
+					}else{
+						mergeArr.push(a[pointer1]);
+						pointer1++;
+						pointer2++;
+					}
+				}
+			}
+			return mergeArr;
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

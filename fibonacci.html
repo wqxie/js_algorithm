@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fibonacci Array</title>
+	<script type="text/javascript">
+		function getFib(num){
+			var fib_arr = [1,1];
+			if (num<=2) {
+				// return fib_arr[num-1];
+				return fib_arr;
+			}else{
+				for (var i = 3; i <= num; i++) {
+					fib_arr.push(fib_arr[i-3]+fib_arr[i-2]);	
+				}
+				//return fib_arr[num-1];
+				return fib_arr;
+			}
+		}
+	</script>
+</head>
+<body>
+
+</body>
+
+</html>

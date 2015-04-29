@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reverse In Place</title>
+	<script type="text/javascript">
+		function reversePlace(str){
+			var pointer1=0,pointer2=1,wordLen = str.length;
+			var reversed='';
+			while(pointer2<=wordLen){
+				if (str[pointer2] == ' ' || pointer2 == wordLen) {
+					for(var i = 1; i <= pointer2-pointer1;i++){
+						reversed+=str[pointer2-i];
+					}
+					if (pointer2 != wordLen) {
+						reversed+=' ';
+					}
+					pointer1=pointer2+1;
+					pointer2++;
+				}else{
+					pointer2++;
+				}
+			}
+			return reversed;
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

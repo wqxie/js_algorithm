@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>First Non repeating char</title>
+	<script type="text/javascript">
+		function firstNonRepeatChar(str){
+			var basePointer = 0, exists = {}, wordLen = str.length;
+			while(basePointer<wordLen){
+				if (!exists[str[basePointer]]&&(str[basePointer]!=' ')) {
+					for(var movePointer = basePointer+1 ; movePointer<wordLen;movePointer++){
+						if(str[movePointer]==str[basePointer]){
+							exists[str[basePointer]]=true;
+							basePointer++;
+							break;
+						}else if (movePointer==wordLen-1) {
+							return str[basePointer];
+						}
+					}
+				}else{
+					basePointer++;
+				}
+			}
+			return "there are not any nonrepeating char";
+		}
+	</script>
+</head>
+<body>
+</body>
+</html>

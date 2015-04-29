@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Check Prime</title>
+	<script type="text/javascript">
+		function isPrime(num){
+			var base = 2;
+			if (num == 1) {
+				return false;
+			}
+			if (num == 2) {
+				return true;
+			}
+			while(base * base <= num){
+				if (num%base == 0) {
+					return false;
+				}else{
+					base++;
+				}
+			}
+			return true;
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Remove duplicate char(Not complete)</title>
+	<script type="text/javascript">
+		function rmvDuplicateChar(str){
+			var basePointer = 0, exists = {}, wordLen = str.length;
+			var simple = '';
+			while(basePointer<wordLen){
+				if (!exists[str[basePointer]]&&(str[basePointer]!=' ')) {
+					for(var movePointer = basePointer+1 ; movePointer<wordLen;movePointer++){
+						if(str[movePointer]==str[basePointer]){
+							simple+=str[basePointer];
+							exists[str[basePointer]]=true;
+							basePointer++;
+							break;
+						}else if (movePointer==wordLen-1) {
+							simple+=str[basePointer];
+							break;
+						}
+					}
+				}else{
+					basePointer++;
+				}
+				console.log(simple);
+			}
+			return simple;
+		}
+	</script>
+</head>
+<body>
+</body>
+</html>

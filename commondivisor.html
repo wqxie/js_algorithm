@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Greatest Common Divisor</title>
+	<script type="text/javascript">
+		function greatestCommonDivisor(num1, num2){
+			var greatest = 1, base = 2;
+			while ((base<=num1) && (base<=num2)){
+				if ((num1%base==0)&&(num2%base==0)) {
+					greatest = base;
+					base ++;
+				}else{
+					base ++;
+				}
+			}
+			return greatest;
+		}
+	</script>
+</head>
+<body>
+
+</body>
+</html>
