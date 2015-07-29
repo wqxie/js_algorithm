@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Extend Javascript Function</title>
+	<script type="text/javascript">
+		Date.prototype.nextDay = function(){
+			var currentDate = this.getDate();
+			return new Date(this.setDate(currentDate + 1));
+		}
+		var date = new Date();
+		console.log(date);
+		console.log(date.nextDay());
+	</script>
+</head>
+<body>
+
+</body>
+</html>

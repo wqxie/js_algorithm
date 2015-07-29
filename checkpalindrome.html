@@ -4,7 +4,12 @@
 	<title>Check Palindrome</title>
 	<script type="text/javascript">
 		function checkPalindrome(str){
-			
+			for(var i = 0; i <= (str.length-1)/2; i++){
+				if (str[i]!=str[str.length-1-i]) {
+					return false;
+				}
+			}
+			return true;
 		}
 	</script>
 </head>
